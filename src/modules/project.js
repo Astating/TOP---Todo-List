@@ -1,20 +1,21 @@
 export class Project {
-  _todoList = [];
+  taskList = [];
+
   constructor(name, { description = "", done = false } = {}) {
-    this._name = name;
-    this._description = description;
-    this._done = done;
+    this.name = name;
+    this.description = description;
+    this.done = done;
   }
 
-  get todoList() {
-    return this._todoList;
+  addTask(task) {
+    this.taskList.push(task);
   }
 
-  addTodo(todo) {
-    this._todoList.push(todo);
+  removeTask(task) {
+    this.taskList = this.taskList.filter((item) => item === task);
   }
 
-  removeTodo(todo) {
-    const index = this._todoList.indexOf(todo);
+  resetProject() {
+    this.taskList = [];
   }
 }
