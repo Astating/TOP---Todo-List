@@ -19,9 +19,13 @@ nav {
   overflow: auto;
   position: sticky;
   top: 0;
+  width: 33vw;
+  min-width: max-content;
+  background-color: ghostwhite;
 }
 
 article {
   min-height: 100vh;
   width: 100%;
+  background-color: antiquewhite;
 }
